@@ -116,3 +116,4 @@ rules: >
 ## Reference
 - [Invoke-Maldaptive](https://github.com/MaLDAPtive/Invoke-Maldaptive) by MaLDAPtive
 - [Detection-Ideas-Rules](https://github.com/vadim-hunter/Detection-Ideas-Rules/blob/main/Tools/BloodHound.yaml) by vadim-hunter
+- [ldapad-logging](https://cravaterouge.com/articles/ldapad-logging/) by cravaterouge.com
