@@ -103,16 +103,6 @@ Digits (1-9):
 | HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold | DWORD     | 1,000         |
 ```
 
-## BloodHound Detection-Ideas-Rules
-```
-ldap_query:
-   - EDR (Microsoft-Windows-LDAP-Client ETW)
-rules: >
-   - Channel:EDR AND EventType:LDAPQuery AND QueryFilter:("*\(objectclass\=computer\)\(userAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=8192\)\)*"
-      OR "*\(sAMAccountType\=805306369\)\(\!\(UserAccountControl\:1\.2\.840\.113556\.1\.4\.803\:\=2\)\)*" OR "*\(objectcategory\=organizationalUnit\)\(objectclass\=domain\)\)\(gplink\=\*\)\(flags\=\*\)*"
-      OR "*\(objectcategory\=groupPolicyContainer\)\(flags\=\*\)*" OR "*\(samaccounttype\=805306368\)\(serviceprincipalname\=\*\)*"
-```
-
 ## Reference
 - [Invoke-Maldaptive](https://github.com/MaLDAPtive/Invoke-Maldaptive) by MaLDAPtive
 - [Detection-Ideas-Rules](https://github.com/vadim-hunter/Detection-Ideas-Rules/blob/main/Tools/BloodHound.yaml) by vadim-hunter
